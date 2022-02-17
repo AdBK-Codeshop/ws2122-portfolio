@@ -7,7 +7,7 @@
       <nuxt-link to="/"> <main-logo /> </nuxt-link>
     </div>
     <nav>
-      <nuxt-link to="about"> About </nuxt-link>
+      <nuxt-link to="/about"> About </nuxt-link>
     </nav>
   </header>
 </template>
@@ -27,11 +27,5 @@ export default {
 
 .main-header__logo svg {
   height: 1.5rem;
-}
-
-.main-header a,
-.main-header a:hover {
-  color: inherit;
-  text-decoration: none;
 }
 </style>

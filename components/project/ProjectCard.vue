@@ -1,12 +1,12 @@
 <template>
   <article class="project-card">
     <div class="project-card__thumbnail">
-      <img :src="project.image" />
+      <img :src="project.featuredImage" />
     </div>
-    <div class="project-card__title">
+    <nuxt-link :to="`project/${project.slug}`" class="project-card__title">
       <p class="title">{{ project.title }}</p>
       <p class="subtitle">{{ project.subtitle }}</p>
-    </div>
+    </nuxt-link>
   </article>
 </template>
 

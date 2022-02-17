@@ -12,19 +12,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      projects: [
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/01.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/02.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/03.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/01.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/02.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/03.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/02.jpg' },
-        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/03.jpg' },
-      ],
-    }
+  async asyncData({ $content }) {
+    const projects = await $content('projects').fetch()
+    return { projects }
   },
 }
 </script>
