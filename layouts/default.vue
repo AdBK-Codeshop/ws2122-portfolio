@@ -15,8 +15,9 @@ export default {
 <style>
 :root {
   --body-color: rgb(43, 43, 43);
-  --body-bg: #bcffa5;
+  --body-bg: #fafafa;
 }
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
