@@ -29,7 +29,6 @@ export default {}
   animation-fill-mode: forwards;
   animation-delay: 700ms;
   animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-  pointer-events: none;
 }
 
 .intro__logo {
@@ -46,6 +45,7 @@ export default {}
   }
   to {
     clip-path: inset(0% 0% 100% 0%);
+    visibility: hidden;
   }
 }
 
