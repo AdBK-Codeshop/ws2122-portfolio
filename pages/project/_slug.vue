@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Projects</h1>
-  </div>
+  <main class="page-project">
+    <h1>Project</h1>
+  </main>
 </template>
 
 <script>

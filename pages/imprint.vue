@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Home</h1>
-  </div>
+  <main class="page-imprint">
+    <h1>Imprint</h1>
+  </main>
 </template>
 
 <script>

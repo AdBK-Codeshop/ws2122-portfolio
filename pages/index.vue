@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main class="page-index">
     <project-grid>
       <project-card
         v-for="(project, index) in projects"
@@ -7,7 +7,7 @@
         :project="project"
       />
     </project-grid>
-  </div>
+  </main>
 </template>
 
 <script>
