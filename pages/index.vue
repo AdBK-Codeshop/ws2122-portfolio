@@ -1,7 +1,11 @@
 <template>
   <div>
     <project-grid>
-      <project-card v-for="project in projects" :key="project.title" />
+      <project-card
+        v-for="(project, index) in projects"
+        :key="index"
+        :project="project"
+      />
     </project-grid>
   </div>
 </template>
@@ -11,9 +15,14 @@ export default {
   data() {
     return {
       projects: [
-        { title: 'project a' },
-        { title: 'project b' },
-        { title: 'project c' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/01.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/02.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/03.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/01.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/02.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/03.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/02.jpg' },
+        { title: 'Space Capsule', subtitle: 'NASA', image: '/images/03.jpg' },
       ],
     }
   },
