@@ -12,18 +12,18 @@ export default {}
 
 <style>
 .intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1000;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--body-color);
   color: var(--body-bg);
-
   animation-name: swipe-up;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
