@@ -10,4 +10,29 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 960px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+</style>
