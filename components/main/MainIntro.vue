@@ -29,14 +29,26 @@ export default {}
   animation-fill-mode: forwards;
   animation-delay: 700ms;
   animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  transform: translateZ(0);
 }
 
 .intro__logo {
-  width: 80%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.intro__logo svg {
+  width: 66%;
+  max-height: 50vh;
 
   animation-name: fade-up;
   animation-duration: 1200ms;
   animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.intor__logo svg {
+  display: inline-flex;
 }
 
 @keyframes swipe-up {
