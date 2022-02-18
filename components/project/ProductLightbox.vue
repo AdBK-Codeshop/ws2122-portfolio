@@ -1,9 +1,13 @@
 <template>
   <div class="project-lightbox">
-    <button class="project-lightbox__close" @click="close()">Close</button>
+    <a href="#" class="project-lightbox__close" @click.prevent="close()"
+      >Close</a
+    >
     <slider
-      v-slot="{ size, current, prev, next, isBeginning, isEnd }"
+      v-slot="{ size, current, prev, next }"
       :initial="initial"
+      :duration="0"
+      :loop="true"
       class="project-lightbox__slider"
     >
       <slide
@@ -17,12 +21,10 @@
         {{ current + 1 }} / {{ size }}
       </div>
       <div
-        v-show="!isBeginning"
         class="project-lightbox__slider-controls project-lightbox__slider-controls--prev"
         @click="prev"
       />
       <div
-        v-show="!isEnd"
         class="project-lightbox__slider-controls project-lightbox__slider-controls--next"
         @click="next"
       />
@@ -63,6 +65,7 @@ export default {
   overflow: hidden;
   background-color: var(--body-bg);
   color: var(--body-color);
+  padding: var(--spacer);
 }
 
 .project-lightbox__slider {
@@ -109,7 +112,6 @@ export default {
   left: var(--spacer);
   z-index: 10;
   font-variant-numeric: tabular-nums;
-  text-transform: uppercase;
 }
 
 .project-lightbox__close {
@@ -118,6 +120,5 @@ export default {
   right: var(--spacer);
   z-index: 10;
   cursor: pointer;
-  text-transform: uppercase;
 }
 </style>
