@@ -4,7 +4,7 @@
       <h1>{{ project.title }}</h1>
       <h2>{{ project.subtitle }}</h2>
     </header>
-    <nuxt-content :document="project" class="project-details" />
+    <project-content :document="project" class="project-details" />
     <project-pagination :prev="pagination[0]" :next="pagination[1]" />
   </main>
 </template>

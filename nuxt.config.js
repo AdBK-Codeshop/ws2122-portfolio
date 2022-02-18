@@ -21,7 +21,14 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/fonts/inter/stylesheet.css', '~/assets/styles/reset.css'],
+  css: [
+    '~/assets/fonts/inter/stylesheet.css',
+    '~/assets/styles/reset.css',
+    '~/assets/styles/base.css',
+    '~/assets/styles/animation.css',
+    '~/assets/styles/grid.css',
+    '~/assets/styles/aspect.css',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

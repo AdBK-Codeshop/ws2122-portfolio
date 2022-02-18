@@ -1,0 +1,27 @@
+.page-leave-active {
+  animation: anim-out 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.page-enter-active {
+  animation: anim-in 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes anim-in {
+  0% {
+    transform: translateY(3vh);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-out {
+  from {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  to {
+    clip-path: inset(0% 0% 100% 0%);
+    visibility: hidden;
+  }
+}

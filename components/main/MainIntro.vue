@@ -25,10 +25,10 @@ export default {}
   background-color: var(--body-color);
   color: var(--body-bg);
   animation-name: swipe-up;
-  animation-duration: 500ms;
+  animation-duration: 600ms;
   animation-fill-mode: forwards;
-  animation-delay: 700ms;
-  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  animation-delay: 1000ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   transform: translateZ(0);
 }
 
@@ -64,7 +64,7 @@ export default {}
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3vh);
   }
   to {
     opacity: 1;
