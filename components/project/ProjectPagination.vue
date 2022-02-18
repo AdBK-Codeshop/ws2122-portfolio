@@ -27,7 +27,7 @@ export default {
 
 <style>
 .pagination {
-  margin-top: 3rem;
+  margin-top: calc(var(--spacer) * 3);
   display: flex;
   justify-content: space-between;
 }

@@ -1,13 +1,21 @@
 <template>
   <header class="main-header">
     <nav>
-      <nuxt-link to="/"> Projects </nuxt-link>
+      <ul>
+        <li>
+          <nuxt-link to="/"> Projects </nuxt-link>
+        </li>
+      </ul>
     </nav>
     <div class="main-header__logo">
       <nuxt-link to="/"> <main-logo /> </nuxt-link>
     </div>
     <nav>
-      <nuxt-link to="/about"> About </nuxt-link>
+      <ul>
+        <li>
+          <nuxt-link to="/about"> About </nuxt-link>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -22,10 +30,26 @@ export default {
 .main-header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: var(--spacer) var(--spacer) 0 var(--spacer);
 }
 
 .main-header__logo svg {
   height: 1.5rem;
+}
+
+.main-header ul {
+  display: inline-flex;
+}
+
+.main-header ul li + li {
+  margin-left: var(--spacer);
+}
+
+.main-header nav:first-child {
+  flex-basis: 50%;
+}
+.main-header nav:last-child {
+  flex-basis: 50%;
+  text-align: right;
 }
 </style>

@@ -14,8 +14,8 @@ export default {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  padding: 16px;
+  gap: var(--spacer);
+  padding: var(--spacer);
 }
 
 @media only screen and (max-width: 960px) {

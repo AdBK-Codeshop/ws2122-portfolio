@@ -30,53 +30,20 @@ export default {
 </script>
 <style>
 .page-project {
-  padding: 0 1rem;
+  padding: 0 var(--spacer);
 }
 
 .project-details {
-  margin-top: 2rem;
+  margin-top: calc(var(--spacer) * 3);
 }
 
 .project-details > * {
-  margin-top: 1rem;
+  margin-top: var(--spacer);
 }
 
 .page-project header {
   font-size: 3rem;
   max-width: 87.5%;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-}
-
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  padding: 0 0.5rem;
-}
-
-.col-6 {
-  width: calc(100% / 12 * 6);
-}
-
-.col-8 {
-  width: calc(100% / 12 * 8);
-}
-
-.col-12 {
-  width: calc(100% / 12 * 12);
+  margin-top: calc(var(--spacer) * 2);
 }
 </style>

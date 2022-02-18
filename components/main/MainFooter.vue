@@ -27,9 +27,9 @@ export default {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  padding: 0 var(--spacer);
+  margin-top: calc(var(--spacer) * 3);
+  margin-bottom: var(--spacer);
 }
 
 .main-footer ul {
@@ -37,7 +37,7 @@ export default {
 }
 
 .main-footer ul li + li {
-  margin-left: 1rem;
+  margin-left: var(--spacer);
 }
 
 .main-footer__logo svg {
