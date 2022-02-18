@@ -1,6 +1,6 @@
 <template>
   <footer class="main-footer">
-    ©{{ new Date().getFullYear() }}, David Coperfield
+    ©{{ new Date().getFullYear() }}, Copperfield
     <div class="main-footer__logo">
       <nuxt-link to="/"> <main-logo /> </nuxt-link>
     </div>
