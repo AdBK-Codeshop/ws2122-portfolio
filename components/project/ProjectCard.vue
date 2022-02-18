@@ -1,13 +1,13 @@
 <template>
-  <article class="project-card">
+  <nuxt-link :to="`project/${project.slug}`" class="project-card">
     <div class="project-card__thumbnail">
       <img :src="project.featuredImage" />
     </div>
-    <nuxt-link :to="`project/${project.slug}`" class="project-card__title">
+    <div class="project-card__title">
       <p class="title">{{ project.title }}</p>
       <p class="subtitle">{{ project.subtitle }}</p>
-    </nuxt-link>
-  </article>
+    </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -49,9 +49,20 @@ export default {
 }
 
 .project-card__title {
-  position: relative;
+  display: block;
+  width: 100%;
   padding: 12px 0 0 0;
 }
+
+/* Alternative title on top of image
+.project-card__title {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding: 12px 0 0 0;
+  bottom: 0;
+  padding: 1rem 1.25rem;
+} */
 
 .project-card__title .title,
 .project-card__title .subtitle {

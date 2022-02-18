@@ -3,6 +3,7 @@
     <main-intro />
     <main-header />
     <Nuxt />
+    <main-footer />
   </div>
 </template>
 
@@ -28,5 +29,15 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--body-color);
   background-color: var(--body-bg);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 </style>
