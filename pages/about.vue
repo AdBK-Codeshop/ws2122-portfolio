@@ -1,9 +1,9 @@
 <template>
   <main class="page-about">
     <p>
-      Helge Schneider is an <i>award-winning</i> designer born in Germany,
-      raised in Switzerland and currently living in New York working within
-      <i>Music</i>, <i>Fashion</i> and <i>Art</i>.<br />
+      Elon Musk is an <i>award-winning</i> designer born in Germany, raised in
+      Switzerland and currently living in New York working within <i>Music</i>,
+      <i>Fashion</i> and <i>Art</i>.<br />
       👉 <a href="mailto:info@example.org">Drop me a line</a>
     </p>
   </main>
@@ -12,6 +12,7 @@
 <script>
 export default {}
 </script>
+
 <style>
 .page-about {
   padding: 1rem;
