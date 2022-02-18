@@ -1,9 +1,10 @@
 <template>
-  <main class="page-main">
+  <main class="page-project">
     <header>
       <h1>{{ project.title }}</h1>
       <h2>{{ project.subtitle }}</h2>
     </header>
+    <nuxt-content :document="project" class="project-details" />
     <footer>
       <nuxt-link :to="get(pagination, '[0].slug', '')">{{
         get(pagination, '[0].title', '')
@@ -37,18 +38,43 @@ export default {
 }
 </script>
 <style>
-.page-main {
+.page-project {
   padding: 1rem;
 }
 
-.page-main header {
+.project-details {
+  margin-top: 3rem;
+}
+
+.project-details * + * {
+  margin-top: 1rem;
+}
+
+.page-project header {
   font-size: 3rem;
   max-width: 87.5%;
 }
 
-.page-main footer {
+.page-project footer {
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-6 {
+  width: calc(100% / 12 * 6);
+}
+
+.col-8 {
+  width: calc(100% / 12 * 8);
+}
+
+.col-12 {
+  width: calc(100% / 12 * 12);
 }
 </style>
