@@ -30,14 +30,14 @@ export default {
 </script>
 <style>
 .page-project {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .project-details {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
-.project-details * + * {
+.project-details > * {
   margin-top: 1rem;
 }
 
@@ -46,15 +46,26 @@ export default {
   max-width: 87.5%;
 }
 
-.page-project footer {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 .row {
   display: flex;
   justify-content: center;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  padding: 0 0.5rem;
 }
 
 .col-6 {

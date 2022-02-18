@@ -1,6 +1,6 @@
 <template>
   <footer class="main-footer">
-    © David Coperfield, {{ new Date().getFullYear() }}
+    ©{{ new Date().getFullYear() }}, David Coperfield
     <div class="main-footer__logo">
       <nuxt-link to="/"> <main-logo /> </nuxt-link>
     </div>
@@ -27,8 +27,9 @@ export default {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 1rem;
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .main-footer ul {
