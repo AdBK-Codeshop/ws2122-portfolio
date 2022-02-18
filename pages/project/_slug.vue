@@ -5,21 +5,15 @@
       <h2>{{ project.subtitle }}</h2>
     </header>
     <nuxt-content :document="project" class="project-details" />
-    <footer>
-      <nuxt-link :to="get(pagination, '[0].slug', '')">{{
-        get(pagination, '[0].title', '')
-      }}</nuxt-link>
-      <nuxt-link :to="get(pagination, '[1].slug', '')">{{
-        get(pagination, '[1].title', '')
-      }}</nuxt-link>
-    </footer>
+    <project-pagination :prev="pagination[0]" :next="pagination[1]" />
   </main>
 </template>
 
 <script>
-import get from 'lodash/get'
+import ProjectPagination from '~/components/project/ProjectPagination.vue'
 
 export default {
+  components: { ProjectPagination },
   async asyncData({ $content, params }) {
     const project = await $content('projects', params.slug).fetch()
     const pagination = await $content('projects')
@@ -31,9 +25,6 @@ export default {
       project,
       pagination,
     }
-  },
-  methods: {
-    get,
   },
 }
 </script>
