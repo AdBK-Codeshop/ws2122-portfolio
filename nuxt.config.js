@@ -24,7 +24,7 @@ export default {
   css: ['~/assets/fonts/inter/stylesheet.css', '~/assets/styles/reset.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vue-keen-slider', '~/plugins/vue-modal'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
