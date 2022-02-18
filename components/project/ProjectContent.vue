@@ -17,24 +17,46 @@ export default {
   },
   data() {
     return {
+      imgNodes: [],
       gallery: [],
     }
   },
   mounted() {
-    const nodes = this.$el.getElementsByTagName('img')
-
-    for (const n of nodes) {
+    this.imgNodes = this.$el.getElementsByTagName('img')
+    for (const n of this.imgNodes) {
       n.addEventListener('click', this.enterGallery)
       this.gallery.push(n.attributes[0]?.nodeValue)
     }
   },
+  beforeDestroy() {
+    for (const n of this.imgNodes) {
+      n.removeEventListener('click', this.enterGallery)
+    }
+  },
   methods: {
     enterGallery(e) {
-      const clickedImg = e.target.src
-      console.log('~ clickedImg', clickedImg)
+      e.stopPropagation()
+      e.preventDefault()
+      const clickedImg = e.target.getAttribute('src')
+      const index = this.gallery.indexOf(clickedImg)
+
+      this.$modal.open({
+        fullScreen: true,
+        parent: this,
+        animation: 'none',
+        props: {
+          images: this.gallery,
+          initial: index,
+        },
+        component: () => import('~/components/project/ProductLightbox.vue'),
+      })
     },
   },
 }
 </script>
 
-<style></style>
+<style>
+.project-details img:hover {
+  cursor: pointer;
+}
+</style>
