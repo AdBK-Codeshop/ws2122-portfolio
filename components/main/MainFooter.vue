@@ -7,6 +7,9 @@
     <nav>
       <ul>
         <li>
+          <nuxt-link to="/imprint"> Imprint</nuxt-link>
+        </li>
+        <li>
           <a href="https://www.twitter.com" target="__blank"> Twitter </a>
         </li>
         <li>

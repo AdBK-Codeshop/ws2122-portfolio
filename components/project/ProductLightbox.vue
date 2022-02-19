@@ -65,7 +65,7 @@ export default {
   overflow: hidden;
   background-color: var(--body-bg);
   color: var(--body-color);
-  padding: var(--spacer);
+  padding: calc(var(--spacer) * 3.125) var(--spacer);
 }
 
 .project-lightbox__slider {
